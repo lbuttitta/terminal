@@ -250,6 +250,12 @@ A Racket library for manipulating the terminal.
  @racket['cyan], and @racket['white].
 }
 
+@defproc[(color?
+[v any/c])
+boolean?]{
+        Returns @racket[#t] if @racket[v] is a color, or @racket[#f] otherwise.
+}
+
 @defproc[(set-foreground-color/4-bit
           [color 4-bit-color?])
          void?]{
@@ -290,13 +296,13 @@ A Racket library for manipulating the terminal.
 }
 
 @defproc[(set-foreground-color
-          [color (or/c 4-bit-color? byte? (vector/c byte? byte? byte?))])
+          [color color?])
          void?]{
  Sets the current foreground color to @racket[color].
 }
 
 @defproc[(set-background-color
-          [color (or/c 4-bit-color? byte? (vector/c byte? byte? byte?))])
+          [color color?])
          void?]{
  Sets the current background color to @racket[color].
 }

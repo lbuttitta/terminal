@@ -199,6 +199,13 @@
         'cyan
         'white))
 
+(define/contract color?
+  (-> any/c
+      boolean?)
+  (or/c 4-bit-color?
+        byte?
+        (vector/c byte? byte? byte?)))
+
 (define/contract (set-foreground-color/4-bit color)
   (-> 4-bit-color?
       void?)
