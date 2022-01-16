@@ -291,3 +291,4 @@
     [(4-bit-color? color) (set-background-color/4-bit color)]
     [(byte? color) (set-background-color/8-bit color)]
     [else (apply set-background-color/24-bit (vector->list color))]))
+

@@ -234,3 +234,4 @@
     (console-set-input-mode (saved-console-input-mode)))
   (when (saved-console-output-mode)
     (console-set-output-mode (saved-console-output-mode))))
+

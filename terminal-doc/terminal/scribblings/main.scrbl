@@ -306,3 +306,4 @@ boolean?]{
          void?]{
  Sets the current background color to @racket[color].
 }
+
